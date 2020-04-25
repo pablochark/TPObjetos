@@ -12,7 +12,7 @@ public class Lote {
 	private Local local;
 	
 	public Lote() {
-		super();
+
 	}
 
 	public Lote(LocalDate fechaIngreso, int cantidadIngreso, int cantidadActual, boolean activo, Producto producto,

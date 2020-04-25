@@ -1,6 +1,6 @@
 package datos;
 
-import java.util.List;
+import java.util.Set;
 
 public class Local {
 	private long idLocal;
@@ -8,22 +8,22 @@ public class Local {
 	private String direccion;
 	private float latitud;
 	private float longitud;
-	private List<Lote> listaLotes;
-	private List<Empleado> listaEmpleados;
+	private Set<Lote> Lotes;
+	private Set<Empleado> Empleados;
 	
 	public Local() {
-		super();
+
 	}
 
-	public Local(long telefono, String direccion, float latitud, float longitud, List<Lote> listaLotes,
-			List<Empleado> listaEmpleados) {
+	public Local(long telefono, String direccion, float latitud, float longitud, Set<Lote> lotes,
+			Set<Empleado> empleados) {
 		super();
 		this.telefono = telefono;
 		this.direccion = direccion;
 		this.latitud = latitud;
 		this.longitud = longitud;
-		this.listaLotes = listaLotes;
-		this.listaEmpleados = listaEmpleados;
+		Lotes = lotes;
+		Empleados = empleados;
 	}
 
 	public long getIdLocal() {
@@ -66,27 +66,26 @@ public class Local {
 		this.longitud = longitud;
 	}
 
-	public List<Lote> getListaLotes() {
-		return listaLotes;
+	public Set<Lote> getLotes() {
+		return Lotes;
 	}
 
-	public void setListaLotes(List<Lote> listaLotes) {
-		this.listaLotes = listaLotes;
+	public void setLotes(Set<Lote> lotes) {
+		Lotes = lotes;
 	}
 
-	public List<Empleado> getListaEmpleados() {
-		return listaEmpleados;
+	public Set<Empleado> getEmpleados() {
+		return Empleados;
 	}
 
-	public void setListaEmpleados(List<Empleado> listaEmpleados) {
-		this.listaEmpleados = listaEmpleados;
+	public void setEmpleados(Set<Empleado> empleados) {
+		Empleados = empleados;
 	}
 
 	@Override
 	public String toString() {
 		return "Local [idLocal=" + idLocal + ", telefono=" + telefono + ", direccion=" + direccion + ", latitud="
-				+ latitud + ", longitud=" + longitud + "]";
+				+ latitud + ", longitud=" + longitud + ", Lotes=" + Lotes + "]";
 	}
 
-	
 }
