@@ -12,7 +12,7 @@ public class Local {
 	private Set<Empleado> Empleados;
 	
 	public Local() {
-
+		super();
 	}
 
 	public Local(long telefono, String direccion, float latitud, float longitud, Set<Lote> lotes,
@@ -65,6 +65,12 @@ public class Local {
 	public void setLongitud(float longitud) {
 		this.longitud = longitud;
 	}
+	
+	@Override
+	public String toString() {
+		return "Local [idLocal=" + idLocal + ", telefono=" + telefono + ", direccion=" + direccion + ", latitud="
+				+ latitud + ", longitud=" + longitud + "]";
+	}
 
 	public Set<Lote> getLotes() {
 		return Lotes;
@@ -82,10 +88,6 @@ public class Local {
 		Empleados = empleados;
 	}
 
-	@Override
-	public String toString() {
-		return "Local [idLocal=" + idLocal + ", telefono=" + telefono + ", direccion=" + direccion + ", latitud="
-				+ latitud + ", longitud=" + longitud + ", Lotes=" + Lotes + "]";
-	}
+
 
 }
